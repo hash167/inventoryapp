@@ -1,0 +1,10 @@
+.posts-wrapper.row
+  .item
+    =@item.serial
+    
+    %p.caption
+      =@item.description
+    .text-center.edit-links
+      = link_to "Cancel", items_path
+      |
+      = link_to "Edit Item", edit_item_path(@item)

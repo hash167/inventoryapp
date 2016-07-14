@@ -1,0 +1,24 @@
+%h1 Vision Inventory
+.item-wrapper
+  - @items.each do |item|
+    %div.item.row
+      %div.caption.col-xs-6.col-lg-6
+        Type:
+        = item.equipment_type
+      %div.caption.col-xs-6.col-lg-6
+        Model:
+        = item.model_number
+      %div.caption.col-xs-6.col-lg-6
+        Serial:
+        = item.serial
+      %div.caption.col-xs-6.col-lg-6
+        Description:
+        = item.description
+      %div.caption.col-xs-6.col-lg-6
+        Cost:
+        = item.cost
+      %div.caption.col-xs-6.col-lg-6
+        Purchase Date:
+        = item.purchase_date
+      .text-center.edit-links
+        = link_to "Edit Item", edit_item_path(item)

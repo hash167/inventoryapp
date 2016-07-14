@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type: 
+  model: MyString
+  description: MyText
+  purchase_date: 2016-07-14
+
+two:
+  type: 
+  model: MyString
+  description: MyText
+  purchase_date: 2016-07-14
