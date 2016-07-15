@@ -1,24 +1,38 @@
-%h1 Vision Inventory
 .item-wrapper
   - @items.each do |item|
-    %div.item.row
-      %div.caption.col-xs-6.col-lg-6
-        Type:
-        = item.equipment_type
-      %div.caption.col-xs-6.col-lg-6
-        Model:
-        = item.model_number
-      %div.caption.col-xs-6.col-lg-6
-        Serial:
-        = item.serial
-      %div.caption.col-xs-6.col-lg-6
-        Description:
-        = item.description
-      %div.caption.col-xs-6.col-lg-6
-        Cost:
-        = item.cost
-      %div.caption.col-xs-6.col-lg-6
-        Purchase Date:
-        = item.purchase_date
-      .text-center.edit-links
+    %h3 
+      =item.equipment_type
+      with S/N:
+      = item.serial
+    %div.row.item
+      %div.col-xs-3.form-group
+        %h5 <b> Type:</b>
+        .reg_name
+          = item.equipment_type
+      %div.col-xs-3.form-group
+        %h5 <b> Model:</b>
+        .reg_name
+          = item.model_number
+      %div.col-xs-3.form-group
+        %h5 <b> Serial Number:</b>
+        .reg_name
+          = item.serial
+      %div.col-xs-3.form-group
+        %h5 <b> Description:</b>
+        .reg_name
+          = item.description
+      %div.col-xs-3.form-group
+        %h5 <b> Cost($):</b>
+        .reg_name
+          = item.cost
+      %div.col-xs-3.form-group
+        %h5 <b> Purchase Date:</b>
+        .reg_name
+          = item.purchase_date
+      %div.col-xs-3.form-group
+        %h5 <b> Belongs to User:</b>
+        .reg_name
+          = get_user_name(item)
+      %div.col-xs-3.form-group
+        %br
         = link_to "Edit Item", edit_item_path(item)

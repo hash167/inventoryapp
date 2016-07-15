@@ -1,0 +1,17 @@
+.item-wrapper
+  - @users.each do |user|
+    %div.user.row
+      %div.caption.col-xs-6.col-lg-6
+        Name:
+        = user.name
+      %div.caption.col-xs-6.col-lg-6
+        Email:
+        = user.email
+      %div.caption.col-xs-6.col-lg-6
+        Company:
+        = user.company
+      %div.caption.col-xs-6.col-lg-6
+        Location:
+        = user.location
+      .text-center.edit-links
+        = link_to "Edit user", edit_user_path(user)

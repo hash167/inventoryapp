@@ -1,0 +1,10 @@
+.posts-wrapper.row
+  .item
+    =@user.serial
+    
+    %p.caption
+      =@user.description
+    .text-center.edit-links
+      = link_to "Cancel", users_path
+      |
+      = link_to "Edit user", edit_user_path(@user)

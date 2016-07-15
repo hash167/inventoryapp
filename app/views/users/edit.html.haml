@@ -1,0 +1,18 @@
+.text-center
+  = @user.serial
+.form-wrapper
+  = simple_form_for @user, html: { class: 'form-horizontal', multipart: true } do |f|
+    .form-group
+      = f.input :name
+    .form-group.text-center
+      = f.input :email
+    .form-group.text-center
+      = f.input :company
+    .form-group.text-center
+      = f.input :location
+    .form-group.text-center
+      = f.button :submit, class: 'btn-success'
+  .text-center.edit-links
+  = link_to "Delete User", user_path(@user), method: :delete, data: { confirm: "Are you sure you want to delete this user?" }
+  |
+  = link_to "cancel", users_path

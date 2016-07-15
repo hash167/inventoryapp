@@ -1,9 +1,9 @@
-= simple_form_for @item do |f|
-  = f.input :equipment_type, label: 'Type'
-  = f.input :model_number, label: 'Model'
-  = f.input :serial, label: 'Serial Number'
-  = f.input :cost, label: 'Cost($)'
-  = f.input :description, label: 'Description'
-  = f.input :purchase_date, label: 'Purchase Date'
+= simple_form_for @item , wrapper_mappings: { heck_boxes: :vertical_radio_and_checkboxes, radio_buttons: :vertical_radio_and_checkboxes, file: :vertical_file_input, boolean: :vertical_boolean }do |f|
+  = f.input :equipment_type, placeholder: 'Type' 
+  = f.input :model_number, placeholder: 'Model'
+  = f.input :serial, placeholder: 'Serial Number'
+  = f.input :cost, placeholder: 'Cost($)'
+  = f.input :description, placeholder: 'Description'
+  = f.input :purchase_date, placeholder: 'Purchase Date'
   = f.button :submit
   
