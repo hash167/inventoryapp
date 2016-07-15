@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   #   resources :products
   resources :items
   resources :users
+  resources :transactions
 
   # Example resource route with options:
   #   resources :products do

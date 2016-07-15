@@ -1,0 +1,4 @@
+.item-wrapper
+  - @transactions.each_with_index do |transaction,count|
+    %div.user.row
+      = transaction_info(transaction,count)

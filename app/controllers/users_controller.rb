@@ -7,6 +7,7 @@ class UsersController < ApplicationController
 		@user = User.new
 	end
 	def show
+		@transactions = Transaction.where(user_id: @user.id)
 	end
 	def edit
 

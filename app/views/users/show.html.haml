@@ -1,10 +1,40 @@
-.posts-wrapper.row
+
+.items-wrapper.row
+  %h2
+    User Profile
   .item
-    =@user.serial
+    Name:
+    =@user.name
+    %br 
+    Email:
+    =@user.email
+    %br 
+    Company:
+    =@user.company
+    %br 
+    Location:
+    =@user.location
     
-    %p.caption
-      =@user.description
+    
+      
     .text-center.edit-links
       = link_to "Cancel", users_path
       |
       = link_to "Edit user", edit_user_path(@user)
+.items-wrapper.row
+  %h3
+    User Inventory
+  %br
+  -@user.items.each_with_index do |item, count|
+    %div.row.item
+      = "#{count+1}) #{item.equipment_type}, model number #{item.model_number} with serial number #{item.serial}"
+    
+
+.items-wrapper.row
+  %h3
+    User Transactions
+  %br
+  -@transactions.each_with_index do |transaction, count|
+    %div.row.item
+      = "#{count +1}) #{transaction.item.serial} has been #{transaction.transaction_type} on #{transaction.created_at}"
+    

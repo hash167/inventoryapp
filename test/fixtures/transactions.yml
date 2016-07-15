@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 
+  item_id: 
+  transaction_type: MyString
+  assigned_on: 2016-07-15
+  removed_on: 2016-07-15
+
+two:
+  user_id: 
+  item_id: 
+  transaction_type: MyString
+  assigned_on: 2016-07-15
+  removed_on: 2016-07-15
